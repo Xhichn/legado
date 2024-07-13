@@ -71,6 +71,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_margin="3dp"
+                            android:transitionName="img_cover_card"
                             app:cardCornerRadius="5dp"
                             app:cardElevation="8dp">
 
