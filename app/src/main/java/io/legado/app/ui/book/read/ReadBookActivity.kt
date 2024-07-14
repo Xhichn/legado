@@ -252,6 +252,7 @@ class ReadBookActivity : BaseReadBookActivity(),
         binding.cursorLeft.setOnTouchListener(this)
         binding.cursorRight.setOnTouchListener(this)
         window.setBackgroundDrawable(null)
+        window.allowEnterTransitionOverlap = true
         upScreenTimeOut()
         ReadBook.register(this)
         onBackPressedDispatcher.addCallback(this) {

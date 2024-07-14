@@ -1,6 +1,7 @@
 package io.legado.app.ui.main.bookshelf.style1.books
 
 import android.annotation.SuppressLint
+import android.app.ActivityOptions
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isGone
@@ -271,11 +272,11 @@ class BooksFragment() : BaseFragment(R.layout.fragment_books),
         }
     }
 
-    override fun openBookInfo(book: Book) {
-        startActivity<BookInfoActivity> {
+    override fun openBookInfo(book: Book, view: View) {
+        startActivity<BookInfoActivity> ({
             putExtra("name", book.name)
             putExtra("author", book.author)
-        }
+        }, ActivityOptions.makeSceneTransitionAnimation(activity, view, "img_cover_card").toBundle())
     }
 
     override fun isUpdate(bookUrl: String): Boolean {
